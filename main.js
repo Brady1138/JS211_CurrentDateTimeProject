@@ -16,9 +16,27 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+const numToString = () => {
+  let num = 15;
+  let text = num.toString();
 
+  console.log(text, num)
+
+  document.getElementById("num-to-str").innerHTML = (`The typeof ${text} is ${typeof text}`)
+  // (text)
+  // ("The typeof" + text + " is " (typeof text))
+
+  return text
+  console.log(text) // won't work after a return statement
+}
 
 // Write a JavaScript program to convert a string to the number.
+let myNum = "10";
+let myInteger = parseInt(myNum);
+
+console.log(myInteger);
+
+document.getElementById("str-to-num").innerHTML = (`The typeof ${myNum} is ${typeof myInteger}`)
 
 
 
@@ -30,22 +48,85 @@ const displayDate = () => {
   // * NaN
   // * String
   
-
+  function myDatatype = (myInput) => {
+    if (myInput == Boolean) {
+      console.log("Boolean");
+    }
+    
+    else if (myInput == Null) {
+      console.log("Null")
+    } else if (myInput == Undefined){
+      console.log("Undefined")
+    } else if (myInput == Number) {
+      console.log("Number")
+    } else if (myInput == NaN) {
+      console.log("NaN")
+    } else if (myInput == String) {
+      console.log("String")
+    }
+  }
+  myDatatype(true);
+  document.getElementById("datatypes").innerHTML = (`This is a ${typeof myInput}`)
   
 // Write a JavaScript program that adds 2 numbers together.
+          // AND
 
+let thisInput1 = 25;
+let thisInput2 = 30;
 
+function addingNums = (thisInput1, thisInput2) => {
+  let sumTotal = thisInput1 + thisInput2;
+  console.log(sumTotal);
+}
+addingNums(thisInput1, thisInput2);
+
+document.getElementById("numberAddition").innerHTML = (`The total is ${addingNums}`)
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+let thisOption1 = 5;
+let thisOption2 = 0;
 
+function twoTrue = (thisOption1, thisOption2) => {
+
+if (thisOption1 && thisOption2) {
+  return true;
+} else {
+  return false;
+}
+}
+document.getElementById("bothAreTrue").innerHTML = (`This is ${twoTrue}`)
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
+let thisSelection1 = 5;
+let thisSelection2 = 0;
 
+function oneBeingTrue = (thisSelection1, thisSelection2) => {
+
+if (thisSelection1 || thisSelection2) {
+  return true;
+} else {
+  return false;
+}
+}
+
+document.getElementById("oneIsTrue").innerHTML = (`Only one is ${oneBeingTrue}`)
 
 
 // Write a JavaScript program that runs when both things are not true.  
 
+let thisPick1 = 0;
+let thisPick2 = 0;
+
+function neitherBeingTrue = (thisPick1, thisPick2) => {
+if (thisPick1 && thisPick2) {
+  return false;
+} else {
+  return true;
+}
+}
+
+document.getElementById("neitherTrue").innerHTML = (`This is ${neitherBeingTrue}`)
 // ***************************
 //         PART TWO
 // ***************************
